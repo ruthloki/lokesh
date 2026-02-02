@@ -1,0 +1,36 @@
+<svg width="64" height="64" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#22d3ee;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#3b82f6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#9333ea;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="innerGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:0.3" />
+      <stop offset="100%" style="stop-color:#ffffff;stop-opacity:0" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Main logo background -->
+  <rect x="4" y="4" width="56" height="56" rx="14" ry="14" fill="url(#logoGradient)" />
+  
+  <!-- Inner glow effect -->
+  <rect x="5" y="5" width="54" height="54" rx="13" ry="13" fill="url(#innerGlow)" />
+  
+  <!-- Trophy icon -->
+  <g transform="translate(16, 12)" fill="#ffffff">
+    <!-- Trophy cup -->
+    <path d="M8 4h16v4H8V4zm2 6h12l2 2v4l-2 2H10l-2-2v-4l2-2zm-2 10h4v16c0 2.2 1.8 4 4 4h16c2.2 0 4-1.8 4-4V20h4c2.2 0 4-1.8 4-4v-4c0-2.2-1.8-4-4-4h-4V4c0-2.2-1.8-4-4-4H16c-2.2 0-4 1.8-4 4v4H8c-2.2 0-4 1.8-4 4v4c0 2.2 1.8 4 4 4z" transform="scale(0.6)"/>
+    
+    <!-- Sports ball accent -->
+    <circle cx="16" cy="20" r="3" fill="rgba(255,255,255,0.4)"/>
+    <path d="M16 17c-1 0-2 0.4-2.8 1.2l5.6 5.6c0.8-0.8 1.2-1.8 1.2-2.8s-0.4-2-1.2-2.8c-0.8-0.8-1.8-1.2-2.8-1.2z" fill="rgba(255,255,255,0.6)" transform="scale(0.6) translate(8, 8)"/>
+  </g>
+  
+  <!-- Decorative elements -->
+  <circle cx="52" cy="12" r="2" fill="#fbbf24" opacity="0.8"/>
+  <circle cx="12" cy="52" r="1.5" fill="#22d3ee" opacity="0.6"/>
+  
+  <!-- Border ring -->
+  <rect x="4" y="4" width="56" height="56" rx="14" ry="14" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+</svg>

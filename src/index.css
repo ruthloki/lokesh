@@ -1,3 +1,630 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+/* SportsPro 2026 - Modern Gradient Background with Animations */
+
+/* Font Import */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+/* Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    scroll-behavior: smooth;
+    background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 25%, #1e3a8a 50%, #0f766e 75%, #0f172a 100%);
+    background-size: 400% 400%;
+    animation: gradientShift 15s ease infinite;
+}
+
+/* Modern Gradient Animations */
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+@keyframes gradient-flow {
+    0%, 100% { transform: translateX(-50%) translateY(-50%) rotate(0deg); }
+    33% { transform: translateX(-30%) translateY(-70%) rotate(120deg); }
+    66% { transform: translateX(-70%) translateY(-30%) rotate(240deg); }
+}
+
+@keyframes gradient-shift {
+    0%, 100% { opacity: 0.8; }
+    50% { opacity: 0.4; }
+}
+
+.animate-gradient-shift {
+    animation: gradient-shift 8s ease-in-out infinite;
+}
+
+.animate-gradient-flow {
+    animation: gradient-flow 20s linear infinite;
+}
+
+/* Glass Morphism Effect */
+.glass-morphism {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+/* Floating Particles */
+.particles-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.particle {
+    position: absolute;
+    background: radial-gradient(circle, rgba(99, 102, 241, 0.8) 0%, rgba(139, 92, 246, 0.4) 50%, transparent 100%);
+    border-radius: 50%;
+    animation: float 20s infinite linear;
+}
+
+.particle-1 {
+    width: 4px;
+    height: 4px;
+    left: 10%;
+    animation-delay: 0s;
+    animation-duration: 25s;
+}
+
+.particle-2 {
+    width: 6px;
+    height: 6px;
+    left: 20%;
+    animation-delay: -5s;
+    animation-duration: 30s;
+}
+
+.particle-3 {
+    width: 3px;
+    height: 3px;
+    left: 30%;
+    animation-delay: -10s;
+    animation-duration: 35s;
+}
+
+.particle-4 {
+    width: 5px;
+    height: 5px;
+    left: 40%;
+    animation-delay: -15s;
+    animation-duration: 28s;
+}
+
+.particle-5 {
+    width: 4px;
+    height: 4px;
+    left: 60%;
+    animation-delay: -20s;
+    animation-duration: 32s;
+}
+
+.particle-6 {
+    width: 7px;
+    height: 7px;
+    left: 70%;
+    animation-delay: -25s;
+    animation-duration: 26s;
+}
+
+.particle-7 {
+    width: 3px;
+    height: 3px;
+    left: 80%;
+    animation-delay: -30s;
+    animation-duration: 38s;
+}
+
+.particle-8 {
+    width: 5px;
+    height: 5px;
+    left: 90%;
+    animation-delay: -35s;
+    animation-duration: 29s;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(100vh) rotate(0deg);
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-100px) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+/* Glow Orbs */
+.glow-orbs {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.glow-orb {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(40px);
+    animation: orbFloat 15s infinite ease-in-out;
+}
+
+.glow-orb-1 {
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, rgba(59, 130, 246, 0.3) 0%, transparent 70%);
+    top: 20%;
+    left: 10%;
+    animation-delay: 0s;
+}
+
+.glow-orb-2 {
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(139, 92, 246, 0.2) 0%, transparent 70%);
+    top: 60%;
+    right: 10%;
+    animation-delay: -5s;
+}
+
+.glow-orb-3 {
+    width: 250px;
+    height: 250px;
+    background: radial-gradient(circle, rgba(20, 184, 166, 0.3) 0%, transparent 70%);
+    bottom: 20%;
+    left: 50%;
+    animation-delay: -10s;
+}
+
+@keyframes orbFloat {
+    0%, 100% {
+        transform: translateY(0px) translateX(0px) scale(1);
+    }
+    33% {
+        transform: translateY(-30px) translateX(20px) scale(1.1);
+    }
+    66% {
+        transform: translateY(20px) translateX(-20px) scale(0.9);
+    }
+}
+
+/* Text Glow Animation */
+@keyframes text-glow {
+    0%, 100% {
+        text-shadow: 0 0 20px rgba(99, 102, 241, 0.5);
+    }
+    50% {
+        text-shadow: 0 0 30px rgba(139, 92, 246, 0.8), 0 0 40px rgba(59, 130, 246, 0.3);
+    }
+}
+
+.animate-text-glow {
+    animation: text-glow 3s ease-in-out infinite;
+}
+
+/* Sports Image Slideshow */
+.slideshow-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    z-index: 1;
+}
+
+.slide.active {
+    opacity: 1;
+    z-index: 2;
+}
+
+.slide-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(15, 23, 42, 0.8) 0%, rgba(30, 27, 75, 0.6) 25%, rgba(30, 58, 138, 0.6) 50%, rgba(15, 118, 110, 0.6) 75%, rgba(15, 23, 42, 0.8) 100%);
+    z-index: 3;
+}
+
+/* Enhanced Animations */
+@keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+}
+
+@keyframes glow {
+    0% { text-shadow: 0 0 20px rgba(255, 255, 255, 0.5); }
+    100% { text-shadow: 0 0 30px rgba(255, 255, 255, 0.8), 0 0 40px rgba(59, 130, 246, 0.5); }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes scaleIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes winnerGlow {
+    0%, 100% {
+        box-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
+        border-color: rgba(255, 215, 0, 0.5);
+    }
+    50% {
+        box-shadow: 0 0 40px rgba(255, 215, 0, 0.6);
+        border-color: rgba(255, 215, 0, 0.8);
+    }
+}
+
+/* Winner Highlight Animation */
+.winner-row {
+    position: relative;
+    border-left: 4px solid #FFD700;
+    animation: winnerGlow 3s ease-in-out infinite;
+    background: linear-gradient(90deg, rgba(255, 215, 0, 0.1) 0%, transparent 100%);
+}
+
+.winner-row::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -4px;
+    width: 4px;
+    height: 100%;
+    background: linear-gradient(45deg, #FFD700, #FFA500, #FFD700);
+    animation: shimmer 2s ease-in-out infinite;
+}
+
+@keyframes shimmer {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.7; }
+}
+
+/* Navigation Styles */
+.nav-link {
+    position: relative;
+    transition: all 0.3s ease;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover {
+    color: rgba(255, 255, 255, 1);
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+/* Category Tabs */
+.category-tab {
+    transition: all 0.3s ease;
+    color: rgba(255, 255, 255, 0.7);
+    background: transparent;
+}
+
+.category-tab.active {
+    background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+    color: white;
+    box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
+}
+
+.category-tab:not(.active):hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: rgba(255, 255, 255, 0.9);
+}
+
+/* Category Cards */
+.category-card {
+    transition: all 0.3s ease;
+}
+
+.category-card:hover {
+    transform: translateY(-5px);
+}
+
+.category-card.hidden {
+    display: none;
+}
+
+/* Live Score Styles */
+.live-score {
+    position: relative;
+    text-shadow: 0 0 20px rgba(34, 197, 94, 0.5);
+    color: white;
+}
+
+.live-score.score-update {
+    animation: scoreFlash 1s ease-in-out;
+}
+
+@keyframes scoreFlash {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); color: #22c55e; }
+}
+
+/* Editable Names */
+.editable-name {
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    color: white;
+}
+
+.editable-name:hover {
+    color: #3b82f6;
+}
+
+.editable-name.editing {
+    background: rgba(59, 130, 246, 0.1);
+    border: 2px solid #3b82f6;
+    border-radius: 8px;
+    padding: 4px 8px;
+    outline: none;
+}
+
+/* Live Indicators */
+.live-indicator {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(34, 197, 94, 0.1);
+    padding: 8px 12px;
+    border-radius: 20px;
+    border: 1px solid rgba(34, 197, 94, 0.3);
+}
+
+.live-dot {
+    width: 8px;
+    height: 8px;
+    background: #22c55e;
+    border-radius: 50%;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 0.7;
+        transform: scale(1.2);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .slideshow-container {
+        height: 70vh;
+    }
+    
+    .glow-orb {
+        width: 200px !important;
+        height: 200px !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .particle {
+        width: 2px !important;
+        height: 2px !important;
+    }
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(15, 23, 42, 0.5);
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(135deg, #2563eb, #7c3aed);
+}
+
+/* Fantastic Logo Animations */
+@keyframes logo-glow {
+    0%, 100% { 
+        box-shadow: 0 0 20px rgba(34, 211, 238, 0.4), 0 0 40px rgba(59, 130, 246, 0.3), 0 0 60px rgba(147, 51, 234, 0.2);
+    }
+    50% { 
+        box-shadow: 0 0 30px rgba(34, 211, 238, 0.6), 0 0 60px rgba(59, 130, 246, 0.5), 0 0 90px rgba(147, 51, 234, 0.4);
+    }
+}
+
+@keyframes logo-pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+}
+
+@keyframes logo-rotate {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@keyframes logo-float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+}
+
+@keyframes logo-shimmer {
+    0% { background-position: -200% center; }
+    100% { background-position: 200% center; }
+}
+
+@keyframes particle-float {
+    0%, 100% { 
+        transform: translateY(0px) translateX(0px) scale(1);
+        opacity: 0.6;
+    }
+    25% { 
+        transform: translateY(-5px) translateX(2px) scale(1.1);
+        opacity: 0.8;
+    }
+    50% { 
+        transform: translateY(-8px) translateX(-2px) scale(1.2);
+        opacity: 1;
+    }
+    75% { 
+        transform: translateY(-3px) translateX(3px) scale(1.1);
+        opacity: 0.8;
+    }
+}
+
+/* Logo specific classes */
+.logo-glow {
+    animation: logo-glow 3s ease-in-out infinite;
+}
+
+.logo-pulse {
+    animation: logo-pulse 2s ease-in-out infinite;
+}
+
+.logo-float {
+    animation: logo-float 3s ease-in-out infinite;
+}
+
+.logo-shimmer {
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+    background-size: 200% 100%;
+    animation: logo-shimmer 2s infinite;
+}
+
+.particle-float {
+    animation: particle-float 4s ease-in-out infinite;
+}
+
+.particle-float-delayed {
+    animation: particle-float 4s ease-in-out infinite;
+    animation-delay: 2s;
+}
+
+/* Enhanced text gradients for logo */
+.text-gradient-rainbow {
+    background: linear-gradient(45deg, #ff6b6b, #4ecdc4, #45b7d1, #96ceb4, #feca57, #ff9ff3, #54a0ff);
+    background-size: 400% 400%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradientShift 3s ease infinite;
+}
+
+.text-gradient-fire {
+    background: linear-gradient(45deg, #ff9a9e, #fecfef, #fecfef, #ff6b6b, #ff8e53);
+    background-size: 400% 400%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradientShift 2s ease infinite;
+}
+
+.text-gradient-ocean {
+    background: linear-gradient(45deg, #667eea, #764ba2, #667eea, #4facfe, #00f2fe);
+    background-size: 400% 400%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradientShift 4s ease infinite;
+}
+
+/* Logo hover effects */
+.logo-container:hover .logo-icon {
+    animation: logo-pulse 0.6s ease-in-out;
+}
+
+.logo-container:hover .logo-text {
+    animation: logo-shimmer 1s ease-in-out;
+}
+
+/* 3D Logo effect */
+.logo-3d {
+    transform-style: preserve-3d;
+    perspective: 1000px;
+}
+
+.logo-3d:hover {
+    transform: rotateY(15deg) rotateX(5deg);
+    transition: transform 0.3s ease;
+}
+
+/* Neon glow effect */
+.neon-glow {
+    text-shadow: 
+        0 0 5px currentColor,
+        0 0 10px currentColor,
+        0 0 15px currentColor,
+        0 0 20px #00ffff,
+        0 0 35px #00ffff,
+        0 0 40px #00ffff;
+    animation: neon-flicker 2s infinite alternate;
+}
+
+@keyframes neon-flicker {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.8; }
+}
